@@ -8,20 +8,55 @@
   <title>FlexBox</title>
 </head>
 <body>
-  <section>
-    <div>Flex Item 1</div>
-    <div>Flex Item 2</div>
-    <div>Flex Item 3</div>
-    <div>Flex Item 4</div>
-    <div>Flex Item 5</div>
-    <div>Flex Item 6</div>
-    <div>Flex Item 7</div>
-    <div>Flex Item 8</div>
-    <div>Flex Item 9</div>
-    <div>Flex Item 10</div>
-    <div>Flex Item 11</div>
-    <div>Flex Item 12</div>
+  <h2>Flex Row (Default)</h2>
+  <ul>
+    <li>El contenedor flex actua como un elemento de tipo bloque (ocupando el 100% del width), a menos que se lo declare como "inline-flex"</li>
+    <li>Los items del contenedor flex que no tienen un width establecido ocupan el espacio determinado por su contenido</li>
+    <li>La "dirección de lectura" (Flex-direction) por defecto es de izquierda a derecha (row)</li>
+    <li>Por defecto flex actua como "fila o row" siendo el eje x el principal </li>
+  </ul>
+  <section class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+    <div class="flex-item">Item 7</div>
+    <div class="flex-item">Item 8</div>
   </section>
-  
+  <h2>Flex Row-reverse</h2>
+  <ul>
+    <li>Flex sigue actuando como fila</li>
+    <li>Con row reverse se invierte la "direccion de lectura"(flex-direction)</li>
+    <li>los elementos se "leen" de derecha a izquierda (row-reverse), por eso los items invierten su orden y se posicionan a la derecha</li>
+  </ul>
+  <section class="flex-container row-reverse">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+    <div class="flex-item">Item 7</div>
+    <div class="flex-item">Item 8</div>
+  </section>
+  <h2>Flex Column</h2>
+  <ul>
+    <li>Con "flex-direction: column" el contenedor pasa de fila a columna</li>
+    <li>la dirección de lectura es de arriba hacia abajo (column)</li>
+    <li>El eje Y ahora es el principal</li>
+  </ul>
+  <section class="flex-container column">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+  </section>
+  <h2>Flex Column-reverse</h2>
+  <section class="flex-container column-reverse">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+  </section>
 </body>
 </html>
