@@ -8,13 +8,34 @@
   <title>FlexBox</title>
 </head>
 <body>
-  <h2>Flex Row (Default)</h2>
+  <h2>display: flex</h2>
   <ul>
     <li>El contenedor flex actua como un elemento de tipo bloque (ocupando el 100% del width), a menos que se lo declare como "inline-flex"</li>
     <li>Los items del contenedor flex que no tienen un width establecido ocupan el espacio determinado por su contenido</li>
-    <li>La "dirección de lectura" (Flex-direction) por defecto es de izquierda a derecha (row)</li>
-    <li>Por defecto flex actua como "fila o row" siendo el eje x el principal </li>
   </ul>
+  <h2>flex-direction</h2>
+  <ul>
+    <li>La "dirección de lectura" (Flex-direction) por defecto es de izquierda a derecha (row)</li>
+    <li>Por defecto flexbox actua como "fila o row" siendo el eje X el principal </li>
+  </ul>
+  <ul>
+    <li>Flex sigue actuando como fila</li>
+    <li>Con row reverse se invierte la "direccion de lectura"(flex-direction)</li>
+    <li>los elementos se "leen" de derecha a izquierda (row-reverse), por eso los items invierten su orden y se posicionan a la derecha</li>
+  </ul>
+  <ul>
+    <li>Con "flex-direction: column" el contenedor pasa de fila a columna</li>
+    <li>la dirección de lectura es de arriba hacia abajo (column)</li>
+    <li>El eje Y ahora es el principal</li>
+  </ul>
+  <ul>
+    <li>Se invierte la dirección de lectura, pasando a ser de abajo hacia arriba</li>
+    <li>La nueva direccón invierte el orden de los items y los posiciona en la parte inferior</li>
+    <li>El eje Y sigue siendo el principal</li>
+  </ul>
+  <div class="dos-columnas">
+    <h3>row</h3>
+    <h3>row-reverse</h3>
   <section class="flex-container">
     <div class="flex-item">Item 1</div>
     <div class="flex-item">Item 2</div>
@@ -25,12 +46,6 @@
     <div class="flex-item">Item 7</div>
     <div class="flex-item">Item 8</div>
   </section>
-  <h2>Flex Row-reverse</h2>
-  <ul>
-    <li>Flex sigue actuando como fila</li>
-    <li>Con row reverse se invierte la "direccion de lectura"(flex-direction)</li>
-    <li>los elementos se "leen" de derecha a izquierda (row-reverse), por eso los items invierten su orden y se posicionan a la derecha</li>
-  </ul>
   <section class="flex-container row-reverse">
     <div class="flex-item">Item 1</div>
     <div class="flex-item">Item 2</div>
@@ -41,27 +56,187 @@
     <div class="flex-item">Item 7</div>
     <div class="flex-item">Item 8</div>
   </section>
-  <h2>Flex Column</h2>
-  <ul>
-    <li>Con "flex-direction: column" el contenedor pasa de fila a columna</li>
-    <li>la dirección de lectura es de arriba hacia abajo (column)</li>
-    <li>El eje Y ahora es el principal</li>
-  </ul>
+  <h3>column</h3>
+  <h3>column-reverse</h3>
   <section class="flex-container column">
     <div class="flex-item">Item 1</div>
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
   </section>
-  <h2>Flex Column-reverse</h2>
-  <ul>
-    <li>Se invierte la dirección de lectura, pasando a ser de abajo hacia arriba</li>
-    <li>La nueva direccón invierte el orden de los items y los posiciona en la parte inferior</li>
-    <li>El eje Y sigue siendo el principal</li>
-  </ul>
+  
   <section class="flex-container column-reverse">
     <div class="flex-item">Item 1</div>
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
   </section>
+
+  </div>
+  
+  
+  <h2>Gap</h2>
+  <ul>
+    <li>La propiedad <em>Gap</em> agrega un espaciado entre los items del contenedor flex</li>
+  </ul>
+  <section class="flex-container gap">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+  </section>
+  <h2>Justify-Content</h2>
+  <ul>
+    <li>Esta propiedad permite alinear los items de diferentes formas</li>
+    <li>"Justify-content" actua sobre el eje pricipal del contenedor</li>
+    <li>Si la direccion es row o row-reverse, el eje principal es el eje X, entonces justify content actua sobre el eje horizontal</li>
+    <li>Si la direccion es column o colum-reverse, el eje principal es el eje Y, entonces justfy content actua sobre el eje vertical</li>
+    <li>Para poder alinear los items sobre cualquiera de los ejes, debe haber espacio sobrante entre los items y el contenedor</li>
+    <li>Cuando la direccion es colum o column-reverse, se debe establecer un height explicitamente, de lo contrario la altura siempre será la que ocupa el contenido del contenedor y por ende no habra espacio sobrante para poder notar el centrado</li>
+  </ul>
+  <h3>justify-content: center</h2>
+  <ul>
+    <li>centra los items en el medio del eje principal</li>
+    <li>Para apreciar el centrado, el container debe ser mas grande que el total de items (en alto o anche, dependiendo de la direccion)</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row | row-reverse</h4>
+    <h4>column | column-reverse</h4>
+    <section class="flex-container justify-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column column-height justify-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>justify-content: flex-start</h2>
+  <ul>
+    <li>A menos que elijas otra forma de alineacion, esta es la que tienen todos los items por defecto</li>
+    <li>Centra los items al <b>inicio del eje principal</b></li>
+    <li>Si hablamos de row, la direccion es de izquierda a derecha, entonces el inicio está a la izquierda</li>
+    <li>Si hablamos de row-reverse, la direccion es de derecha a izquierda, entonces el inicio está a la derecha</li>
+    <li>Si hablamos de column, la direccion es de arriba hacia abajo, entonces el inicio está arriba</li>
+    <li>Si hablamos de column-reverse, la direccion es de abajo hacia arriba, entonces el inicio está abajo</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container justify-start">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse justify-start">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column column-height justify-start">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse column-height justify-start">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>justify-content: flex-end</h2>
+  <ul>
+    <li>Centra los items al <b>final del eje principal</b></li>
+    <li>Si hablamos de row, la direccion es de izquierda a derecha, entonces el final está a la derecha</li>
+    <li>Si hablamos de row-reverse, la direccion es de derecha a izquierda, entonces el final está a la izquierda</li>
+    <li>Si hablamos de column, la direccion es de arriba hacia abajo, entonces el final está abajo</li>
+    <li>Si hablamos de column-reverse, la direccion es de abajo hacia arriba, entonces el final está arriba</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container justify-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse justify-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column column-height justify-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse column-height justify-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>justify-content: space-between</h3>
+  <ul>
+    <li>Para usar esta propiedad adecuadamente es necesario tener al menos 2 items</li>
+    <li>Space between alinea los items, poniendo el primer item al inicio del eje principal y el ultimo al final, los items de enmedio los separa de forma equidistante</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row | row-reverse</h4>
+    <h4>column | column-reverse</h4>
+    <section class="flex-container justify-between">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+    </section>
+    <section class="flex-container column column-height justify-between">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>justify-content: space-around</h3>
+  <ul>
+    <li>Para usar esta propiedad adecuadamente es necesario tener al menos 2 items</li>
+    <li>Space around alinea los items, agregando un espaciado de igual valor a cada lado de los items. Entre items dicho espaciado no se combinan o "colapsan", dejando el doble de separacion entre items con respecto a los extremos del contenedor</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row | row-reverse</h4>
+    <h4>column | column-reverse</h4>
+    <section class="flex-container justify-around">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column column-height justify-around">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>justify-content: space-evenly</h3>
+  <ul>
+    <li>Para usar esta propiedad adecuadamente es necesario tener al menos 2 items</li>
+    <li>Space around alinea los items, agregando un espaciado de igual valor a cada lado de los items. Entre items dicho espaciado no se combinan o "colapsan", dejando el doble de separacion entre items con respecto a los extremos del contenedor</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row | row-reverse</h4>
+    <h4>column | column-reverse</h4>
+    <section class="flex-container justify-evenly">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column column-height justify-evenly">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
 </body>
 </html>
