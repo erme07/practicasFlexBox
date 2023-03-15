@@ -119,6 +119,45 @@ h4{
 .flex-basis-100{
   flex-basis: 100px;
 }
+.flex-grow-1{
+  flex-grow: 1;
+}
+.flex-grow-4{
+  flex-grow: 4;
+}
+.flex-shrink{
+  resize: horizontal;
+  overflow: hidden;
+  padding:10px;
+}
+.flex-shrink div{
+  width: 30vw;
+}
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+.flex-shrink-2{
+  flex-shrink: 2;
+}
+
+.order-1{
+  order: 1
+}
+.order-2{
+  order: 2;
+}
+.order-3{
+  order: 3;
+}
+.order-4{
+  order: 4;
+}
+.order-5{
+  order: 5;
+}
+.order-6{
+  order: 6;
+}
 .dos-columnas{
   display: flex;
   gap: 2%;

@@ -69,20 +69,7 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
   </section>
-
   </div>
-  
-  
-  <h2>Gap</h2>
-  <ul>
-    <li>La propiedad <em>Gap</em> agrega un espaciado entre los items del contenedor flex</li>
-  </ul>
-  <section class="flex-container gap">
-    <div class="flex-item">Item 1</div>
-    <div class="flex-item">Item 2</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 4</div>
-  </section>
   <h2>Justify-Content</h2>
   <ul>
     <li>Esta propiedad permite alinear los items de diferentes formas</li>
@@ -479,5 +466,92 @@
       <div class="flex-item flex-basis-100">Item 3</div>
     </section>
   </div>
+  <h2>Flex-Grow</h2>
+  <ul>
+    <li>Es una propiedad que afecta a los items</li>
+    <li>habilita o deshabilita la capacidad de los items de extenderse sobre el eje principal abarcando el espacio sobrante</li>
+    <li>Determina el factor de crecimiento de cada item</li>
+    <li>El valor por defecto es flex-grow:0</li>
+    <li>Con flex-grow:0 el item no crece, aunque haya espacio sobrante en el contenedor</li>
+  </ul>
+    <div class="dos-columnas">
+      <h4>flex-grow:0</h4>
+      <h4>item 1 flex-grow:1| item 2 flex-grow:0 | item 3 flex-grow:4</h4>
+      <section class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </section>
+      <section class="flex-container">
+        <div class="flex-item flex-grow-1">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item flex-grow-4">Item 3</div>
+      </section>
+    </div>
+    <h2>Flex-Shrink</h2>
+  <ul>
+    <li>Es una propiedad que afecta a los items</li>
+    <li>habilita o deshabilita la capacidad de los items de contraerse sobre el eje principal, cuando el contenedor es mas chico que el total de items</li>
+    <li>Determina el factor de contraccion de cada item</li>
+    <li>El valor por defecto es flex-shrink:1, es decir que por defaul los items se van a reducir en caso de ser necesario</li>
+  </ul>
+  <h4>flesh-shrink:1 - los items se contraen de forma equitativa para caber en el contenedor</h4>
+  <section class="flex-container flex-shrink">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+  </section>
+  <h4>flesh-shrink:0 - los items no se contraen aunque ya no quepan en el contenedor</h4>
+  <section class="flex-container flex-shrink">
+    <div class="flex-item flex-shrink-0">Item 1</div>
+    <div class="flex-item flex-shrink-0">Item 2</div>
+    <div class="flex-item flex-shrink-0">Item 3</div>
+  </section>
+  <h4>Item 1 flesh-shrink:1 | Item 2 Flesh-shrink: 0 | item 3 flesh-shrink:2</h4>
+  <section class="flex-container flex-shrink">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item flex-shrink-0">Item 2</div>
+    <div class="flex-item flex-shrink-2">Item 3</div>
+  </section>
+  <h2>Flex</h2>
+  <ul>
+    <li>Es una abreviatura que combina tres propiedades, flex-grow , flex-shrink y flex-basis</li>
+    <li><b>flex: flex-grow flex-shrink flex-basis;</b></li>
+  </ul>
+  <h2>Gap</h2>
+  <ul>
+    <li>La propiedad <em>Gap</em> agrega un espaciado entre los items del contenedor flex</li>
+  </ul>
+  <section class="flex-container gap">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+  </section>
+  <h2>Order</h2>
+  <ul>
+    <li>Esta propiedad permite modificar el orden natural de los items</li>
+    <li>El valor por defecto es order:0</li>
+    <li>Cuando no se establece un orden para los items, el orden en el que aparecen es el mismo en el que se declaran en el documento html</li>
+    <li>Se puede usar valores positivos y negativos, el orden en el que se mostrarán los items es del menor al mayor valor de order</li>
+  </ul>
+  <h4>Orden por defecto</h4>
+  <section class="flex-container flex-wrap gap">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+  </section>
+  <h4>Orden personalizado</h4>
+  <section class="flex-container flex-wrap gap">
+    <div class="flex-item order-6">Item 1</div>
+    <div class="flex-item order-3">Item 2</div>
+    <div class="flex-item order-1">Item 3</div>
+    <div class="flex-item order-5">Item 4</div>
+    <div class="flex-item order-2">Item 5</div>
+    <div class="flex-item order-4">Item 6</div>
+  </section>
 </body>
 </html>
