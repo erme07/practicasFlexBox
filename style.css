@@ -34,6 +34,18 @@ h4{
   padding: 10px 20px;
   border: 1px solid black;
 }
+.height-60{
+  height: 60px;
+}
+.height-80{
+  height: 80px;
+}
+.width-100{
+  width:100px;
+}
+.width-120{
+  width:120px;
+}
 .row-reverse{
   flex-direction: row-reverse;
 }
@@ -45,6 +57,9 @@ h4{
 }
 .column-reverse{
   flex-direction: column-reverse;
+}
+.row-height{
+  height: 200px;
 }
 .gap{
   gap: 15px;
@@ -66,6 +81,18 @@ h4{
 }
 .justify-evenly{
   justify-content: space-evenly;
+}
+.align-center{
+  align-items: center;
+}
+.align-start{
+  align-items: flex-start;
+}
+.align-end{
+  align-items: flex-end;
+}
+.align-baseline{
+  align-items: baseline;
 }
 .dos-columnas{
   display: flex;

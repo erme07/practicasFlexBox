@@ -238,5 +238,160 @@
       <div class="flex-item">Item 3</div>
     </section>
   </div>
+  <h2>Align-Items</h2>
+  <ul>
+    <li>Esta propiedad permite alinear los items de diferentes formas</li>
+    <li>Actua sobre el eje secundario del contenedor</li>
+    <li>Si la direccion es row o row-reverse, el eje principal es el eje X, entonces align items actua sobre el eje Y</li>
+    <li>Si la direccion es column o colum-reverse, el eje principal es el eje Y, entonces align items actua sobre el eje X</li>
+    <li>Para poder alinear los items sobre cualquiera de los ejes, debe haber espacio sobrante entre los items y el contenedor</li>
+    <li>Cuando la direccion es colum o column-reverse, se debe establecer un height explicitamente, de lo contrario la altura siempre será la que ocupa el contenido del contenedor y por ende no habra espacio sobrante para poder notar el centrado</li>
+    <li>En todos los ejemplos de align-items se aplicó un justify-content: center para centrar los items</li>
+  </ul>
+  <h3>align-items: stretch</h3>
+  <ul>
+    <li>Stretch es el valor por defecto</li>
+    <li>Con esta propiedad los items se estiran en la direccion del eje secundario, hasta alcanzar al contenedor</li>
+    <li>En direccion row o row-reverse, si los items tienen un height declarado, stretch no tiene efecto</li>
+    <li>En direccion column o column-reverse, si los items tiene un width declarado, stretch no tiene efecto</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row | row-reverse</h4>
+    <h4>column | column-reverse</h4>
+    <section class="flex-container row-height">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column row-height">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>align-items: center</h3>
+  <ul>
+    <li>Con esta propiedad los items se centran en el medio del eje secundario</li>
+    <li>Los items  ocupan el espacio de su contenido interno, en caso de que no se le asigne medidas explicitamente</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container row-height align-center">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse row-height align-center">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column row-height align-center">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse row-height align-center">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+  </div>
+  <h3>align-items: flex-start</h3>
+  <ul>
+    <li>Con esta propiedad los items se centran en el inicio del eje secundario</li>
+    <li>Los items  ocupan el espacio de su contenido interno, en caso de que no se le asigne medidas explicitamente</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container row-height align-start">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse row-height align-start">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column row-height align-start">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse row-height align-start">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+  </div>
+  <h3>align-items: flex-end</h3>
+  <ul>
+    <li>Con esta propiedad los items se centran en el medio del eje secundario</li>
+    <li>Los items  ocupan el espacio de su contenido interno, en caso de que no se le asigne medidas explicitamente</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container row-height align-end">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse row-height align-end">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column row-height align-end">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse row-height align-end">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+  </div>
+  <h3>align-items: baseline</h3>
+  <ul>
+    <li>Con esta propiedad los items se centran en el medio del eje secundario</li>
+    <li>Los items  ocupan el espacio de su contenido interno, en caso de que no se le asigne medidas explicitamente</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>row-reverse</h4>
+    <section class="flex-container row-height align-baseline">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <section class="flex-container row-reverse row-height align-baseline">
+      <div class="flex-item height-60">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item height-80">Item 3</div>
+    </section>
+    <h4>column</h4>
+    <h4>column-reverse</h4>
+    <section class="flex-container column row-height align-end">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+    <section class="flex-container column-reverse row-height align-end">
+      <div class="flex-item width-100">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item width-120">Item 3</div>
+    </section>
+  </div>
 </body>
 </html>
