@@ -446,5 +446,38 @@
     <li>Es una abreviatura que combina dos propiedades, flex-direction y flex-wrap</li>
     <li><b>flex-flow: flex-direction flex-wrap;</b></li>
   </ul>
+  <h2>Flex-Basis</h2>
+  <ul>
+    <li>Es una propiedad que afecta a los items</li>
+    <li>Establece el ancho de un item dentro de una fila o el alto en un item dentro de una columna</li>
+    <li>El valor por defecto es "auto", es decir que la dimension es definida por el contenido del item o por widths/heights explicitos</li>
+    <li>Si el item tiene definida su dimension en el eje principal, es reemplazada por la dimension escogida en flex-basis</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>flex-basis: auto</h4>
+    <h4>Item 3 Flex-basis: 200px</h4>
+    <section class="flex-container align-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container align-end">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item flex-basis-200">Item 3</div>
+    </section>
+    <h4> column flex-basis:auto</h4>
+    <h4>column item 3 flex-basis: 100px</h4>
+    <section class="flex-container column row-height align-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+    <section class="flex-container column row-height align-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item flex-basis-100">Item 3</div>
+    </section>
+  </div>
 </body>
 </html>
