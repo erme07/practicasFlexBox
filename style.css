@@ -13,6 +13,8 @@ body{
 }
 ul {margin: 10px 0;}
 h4 {text-transform: uppercase;}
+h2{background-color:antiquewhite; padding: 5px;}
+
 .flex-container{
   display: flex;
   margin: auto;
