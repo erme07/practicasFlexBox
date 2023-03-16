@@ -73,7 +73,7 @@ h4 {text-transform: uppercase;}
 .order-5 {order: 5;}
 .order-6 {order: 6;}
 
-.dos-columnas{
+.columnas-auto{
   display: flex;
   gap: 2%;
   flex-wrap: wrap;
@@ -81,11 +81,19 @@ h4 {text-transform: uppercase;}
   border-bottom: 1px dashed black;
   margin-bottom: 20px;
 }
-.dos-columnas >*{
-  width: 49%;
+.columnas-auto >*{
+  width: 100%;
 }
-@media screen and (max-width: 767px){
-  .dos-columnas >*{
-    width: 100%;
+@media screen and (min-width: 768px){
+  .columnas-auto >*{
+    width: 49%;
   }
+  .item-number-1 {order: 1;}
+  .item-number-2 {order: 2;}
+  .item-number-3 {order: 3;}
+  .item-number-4 {order: 4;}
+  .item-number-5 {order: 5;}
+  .item-number-6 {order: 6;}
+  .item-number-7 {order: 7;}
+  .item-number-8 {order: 8;}
 }
