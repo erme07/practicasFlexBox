@@ -41,20 +41,20 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
     <div class="flex-item">Item 4</div>
-    <div class="flex-item">Item 5</div>
-    <div class="flex-item">Item 6</div>
-    <div class="flex-item">Item 7</div>
-    <div class="flex-item">Item 8</div>
+    <!-- <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div> -->
+    <!-- <div class="flex-item">Item 7</div>
+    <div class="flex-item">Item 8</div> -->
   </section>
   <section class="flex-container row-reverse">
     <div class="flex-item">Item 1</div>
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
     <div class="flex-item">Item 4</div>
-    <div class="flex-item">Item 5</div>
-    <div class="flex-item">Item 6</div>
-    <div class="flex-item">Item 7</div>
-    <div class="flex-item">Item 8</div>
+    <!-- <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div> -->
+    <!-- <div class="flex-item">Item 7</div>
+    <div class="flex-item">Item 8</div> -->
   </section>
   <h3>column</h3>
   <h3>column-reverse</h3>
@@ -69,6 +69,65 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
   </section>
+  </div>
+  <h2>Flex-Wrap</h2>
+  <ul>
+    <li>Esta propiedad define el comportamiento de los items con respecto al tamaño de su contenedor</li>
+  </ul>
+  <h3>flex-wrap: nowrap</h3>
+  <ul>
+    <li>Es el valor por defecto</li>
+    <li>Si los items superan en tamaño al contenedor, estos se desbordan del mismo</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>column</h4>
+    <section class="flex-container flex-nowrap align-start justify-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+      <div class="flex-item">Item 5</div>
+      <div class="flex-item">Item 6</div>
+      <div class="flex-item">Item 7</div>
+      <div class="flex-item">Item 8</div>
+      <div class="flex-item">Item 9</div>
+      <div class="flex-item">Item 10</div>
+      <div class="flex-item">Item 11</div>
+      <div class="flex-item">Item 12</div>
+    </section>
+    <section class="flex-container column flex-nowrap align-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
+  </div>
+  <h3>flex-wrap: wrap</h3>
+  <ul>
+    <li>Si los items superan en tamaño al contenedor, se crean nuevas filas o columnas</li>
+  </ul>
+  <div class="dos-columnas">
+    <h4>row</h4>
+    <h4>column</h4>
+    <section class="flex-container flex-wrap align-start justify-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+      <div class="flex-item">Item 5</div>
+      <div class="flex-item">Item 6</div>
+      <div class="flex-item">Item 7</div>
+      <div class="flex-item">Item 8</div>
+      <div class="flex-item">Item 9</div>
+      <div class="flex-item">Item 10</div>
+      <div class="flex-item">Item 11</div>
+      <div class="flex-item">Item 12</div>
+    </section>
+    <section class="flex-container column row-height flex-wrap align-center">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </section>
   </div>
   <h2>Justify-Content</h2>
   <ul>
@@ -179,7 +238,7 @@
       <div class="flex-item">Item 1</div>
       <div class="flex-item">Item 2</div>
       <div class="flex-item">Item 3</div>
-      <div class="flex-item">Item 4</div>
+      <!-- <div class="flex-item">Item 4</div> -->
     </section>
     <section class="flex-container column column-height justify-between">
       <div class="flex-item">Item 1</div>
@@ -232,7 +291,7 @@
     <li>Si la direccion es row o row-reverse, el eje principal es el eje X, entonces align items actua sobre el eje Y</li>
     <li>Si la direccion es column o colum-reverse, el eje principal es el eje Y, entonces align items actua sobre el eje X</li>
     <li>Para poder alinear los items sobre cualquiera de los ejes, debe haber espacio sobrante entre los items y el contenedor</li>
-    <li>Cuando la direccion es colum o column-reverse, se debe establecer un height explicitamente, de lo contrario la altura siempre será la que ocupa el contenido del contenedor y por ende no habra espacio sobrante para poder notar el centrado</li>
+    <li>Cuando la direccion es column o column-reverse, se debe establecer un height explicitamente, de lo contrario la altura siempre será la que ocupa el contenido del contenedor y por ende no habra espacio sobrante para poder notar el centrado</li>
     <li>En todos los ejemplos de align-items se aplicó un justify-content: center para centrar los items</li>
   </ul>
   <h3>align-items: stretch</h3>
@@ -369,70 +428,38 @@
       <div class="flex-item height-80 font-size-30">Item 3</div>
     </section>
   </div>
-  <h2>Flex-Wrap</h2>
+  <h2>Align-self</h2>
   <ul>
-    <li>Esta propiedad define el comportamiento de los items con respecto al tamaño de su contenedor</li>
+    <li>Cumple la misma funcion que align-item, pero para un item especifico</li>
+    <li>Permite tener distintos alineaciones en cada item</li>
   </ul>
-  <h3>flex-wrap: nowrap</h3>
+  <h4>item 1 align-self: flex-start | item 2 align-self: flex-end | item 3 align-self: center</h4>
+  <section class="flex-container row-height">
+    <div class="flex-item height-60 self-start">Item 1</div>
+    <div class="flex-item self-end">Item 2</div>
+    <div class="flex-item height-80 self-center">Item 3</div>
+  </section>
+  <h2>Align-Content</h2>
   <ul>
-    <li>Es el valor por defecto</li>
-    <li>Si los items superan en tamaño al contenedor, estos se desbordan del mismo</li>
+    <li>align-content tiene las mismas opciones que justify-content</li>
+    <li>A diferencia de justify-content, esta propiedad funciona sobre el eje secundario</li>
+    <li>Solo funciona si hay mas de una fila o columna</li>
   </ul>
-  <div class="dos-columnas">
-    <h4>row</h4>
-    <h4>column</h4>
-    <section class="flex-container flex-nowrap align-start justify-center">
-      <div class="flex-item">Item 1</div>
-      <div class="flex-item">Item 2</div>
-      <div class="flex-item">Item 3</div>
-      <div class="flex-item">Item 4</div>
-      <div class="flex-item">Item 5</div>
-      <div class="flex-item">Item 6</div>
-      <div class="flex-item">Item 7</div>
-      <div class="flex-item">Item 8</div>
-      <div class="flex-item">Item 9</div>
-      <div class="flex-item">Item 10</div>
-      <div class="flex-item">Item 11</div>
-      <div class="flex-item">Item 12</div>
-    </section>
-    <section class="flex-container column flex-nowrap align-center">
-      <div class="flex-item">Item 1</div>
-      <div class="flex-item">Item 2</div>
-      <div class="flex-item">Item 3</div>
-    </section>
-  </div>
-  <h3>flex-wrap: wrap</h3>
-  <ul>
-    <li>Si los items superan en tamaño al contenedor, se crean nuevas filas o columnas</li>
-  </ul>
-  <div class="dos-columnas">
-    <h4>row</h4>
-    <h4>column</h4>
-    <section class="flex-container flex-wrap align-start justify-center">
-      <div class="flex-item">Item 1</div>
-      <div class="flex-item">Item 2</div>
-      <div class="flex-item">Item 3</div>
-      <div class="flex-item">Item 4</div>
-      <div class="flex-item">Item 5</div>
-      <div class="flex-item">Item 6</div>
-      <div class="flex-item">Item 7</div>
-      <div class="flex-item">Item 8</div>
-      <div class="flex-item">Item 9</div>
-      <div class="flex-item">Item 10</div>
-      <div class="flex-item">Item 11</div>
-      <div class="flex-item">Item 12</div>
-    </section>
-    <section class="flex-container column row-height flex-wrap align-center">
-      <div class="flex-item">Item 1</div>
-      <div class="flex-item">Item 2</div>
-      <div class="flex-item">Item 3</div>
-    </section>
-  </div>
-  <h2>Flex-Flow</h2>
-  <ul>
-    <li>Es una abreviatura que combina dos propiedades, flex-direction y flex-wrap</li>
-    <li><b>flex-flow: flex-direction flex-wrap;</b></li>
-  </ul>
+  <h4>justify-content: space-between | align-content: space-between</h4>
+  <section class="flex-container flex-wrap align-start align-content justify-between">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+    <div class="flex-item">Item 7</div>
+    <div class="flex-item">Item 8</div>
+    <div class="flex-item">Item 9</div>
+    <div class="flex-item">Item 10</div>
+    <div class="flex-item">Item 11</div>
+    <div class="flex-item">Item 12</div>
+  </section>
   <h2>Flex-Basis</h2>
   <ul>
     <li>Es una propiedad que afecta a los items</li>
@@ -466,6 +493,11 @@
       <div class="flex-item flex-basis-100">Item 3</div>
     </section>
   </div>
+  <h2>Flex-Flow</h2>
+  <ul>
+    <li>Es una abreviatura que combina dos propiedades, flex-direction y flex-wrap</li>
+    <li><b>flex-flow: flex-direction flex-wrap;</b></li>
+  </ul>
   <h2>Flex-Grow</h2>
   <ul>
     <li>Es una propiedad que afecta a los items</li>
@@ -553,5 +585,6 @@
     <div class="flex-item order-2">Item 5</div>
     <div class="flex-item order-4">Item 6</div>
   </section>
+  
 </body>
 </html>
