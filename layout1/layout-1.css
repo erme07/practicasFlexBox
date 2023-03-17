@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header{
+  height: 80px;
+  background-color: cadetblue;
+}
+.footer{
+  height: 80px;
+  background-color: brown;
+}
