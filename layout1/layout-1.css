@@ -73,6 +73,7 @@ main{
   align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
+  gap: 10px;
 }
 .hero-image h2{
   text-transform: uppercase;
