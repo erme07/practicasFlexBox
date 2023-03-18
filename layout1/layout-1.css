@@ -27,12 +27,23 @@ body{
   background-color: var(--back-color);
   color: var(--text-color);
 }
-.header{
+.header, .footer{
   background-color: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+}
+.footer h4{
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.menu{
+  font-size: 14px;
+}
+.menu--footer{
+  font-size: 12px;
 }
 .menu ul{
   list-style-type: none;
@@ -51,10 +62,7 @@ body{
 main{
   flex-grow: 1;
 }
-.footer{
-  height: 80px;
-  background-color: var(--main-color);
-}
+
 .header, .footer{
   padding: 15px 30px;
 }
@@ -97,6 +105,7 @@ main{
   flex: 0 1 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
 }
 .post--reverse{
