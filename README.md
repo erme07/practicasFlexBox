@@ -1,5 +1,7 @@
 # Practicas Flex Box CSS
 
-Este repositorio contiene ejemplos sobre todas las propiedades de flexbox, ademas de la toeria de cada uno redactada desde mi punto de vista.
+* Este repositorio contiene ejemplos sobre todas las propiedades de flexbox, ademas de la toeria de cada uno redactada desde mi punto de vista.
+* Para aplicar todos los conceptos mencionados hago uso de los mismos en diferentes diseños de webs basicas.
 
-Para aplicar todos los conceptos mencionados hago uso de los mismos en diferentes diseños de webs basicas.
+[Prueba en linea](https://erme07.github.io/Calculator/)
+[Prueba en linea](https://erme07.github.io/Calculator/)
