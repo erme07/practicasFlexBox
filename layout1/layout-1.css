@@ -90,10 +90,17 @@ main{
   font-size: 8vw;
 }
 .blog{
-  padding: 80px 30px;
+  padding: 60px 30px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.blog h2{
+  align-self: center;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 .post{
   display: flex;
@@ -154,6 +161,27 @@ main{
   stroke-dashoffset: -134;
 }
 
+.galeria{
+  background-color: var(--second-color);
+  padding: 50px 30px;
+  height: min-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.galeria div{
+  padding: 15px 15px 30px;
+  background-color: var(--text-color);
+  border-radius: 1%;
+}
+.galeria h2{
+  text-transform: uppercase;
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 20px;
+  color: var(--back-color);
+}
 @media screen and (max-width:767px){
   .blog{
     padding: 50px 30px;
@@ -167,7 +195,7 @@ main{
     position: relative;
     z-index: 2;
   }
-  .menu{
+  header .menu{
     position: absolute;
     top: 60px;
     left: 0;
@@ -181,7 +209,7 @@ main{
   .menu--opened{
     transform: translateY(0);
   }
-  .menu ul{
+  header .menu ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
