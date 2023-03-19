@@ -11,6 +11,9 @@
   --text-color: #eeeff3;
   --back-color: #040908;
 }
+html{
+  scroll-behavior: smooth;
+}
 a{
   text-decoration: none;
   color: unset;
@@ -42,6 +45,30 @@ body{
 .menu{
   font-size: 14px;
 }
+.menu__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  display: none;
+}
+.menu__button svg{
+  width: 30px;
+  height: 30px;
+}
+.line {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 10;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {stroke-dasharray: 60 207;}
+.line2 {stroke-dasharray: 60 60;}
+.line3 {stroke-dasharray: 60 207;}
+.opened .line1 {stroke-dasharray: 90 207;stroke-dashoffset: -134;}
+.opened .line2 {stroke-dasharray: 1 60;stroke-dashoffset: -30;}
+.opened .line3 {stroke-dasharray: 90 207;stroke-dashoffset: -134;}
 .menu--footer{
   font-size: 12px;
 }
@@ -120,47 +147,6 @@ main{
 .post--reverse{
   flex-direction: row-reverse;
 }
-
-.menu__button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  display: none;
-}
-.menu__button svg{
-  width: 30px;
-  height: 30px;
-}
-.line {
-  fill: none;
-  stroke: var(--text-color);
-  stroke-width: 10;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line1 {
-  stroke-dasharray: 60 207;
-}
-.line2 {
-  stroke-dasharray: 60 60;
-}
-.line3 {
-  stroke-dasharray: 60 207;
-}
-.opened .line1 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-}
-.opened .line2 {
-  stroke-dasharray: 1 60;
-  stroke-dashoffset: -30;
-}
-.opened .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-}
-
 .galeria{
   background-color: var(--second-color);
   padding: 50px 30px;
@@ -182,6 +168,22 @@ main{
   padding-top: 20px;
   color: var(--back-color);
 }
+.about{
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about h2{
+  text-align: center;
+}
+.about__text{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media screen and (max-width:767px){
   .blog{
     padding: 50px 30px;
@@ -203,10 +205,10 @@ main{
     padding: 20px;
     transform: translateY(calc(-100% - 60px));
     background-color: var(--main-color);
-    transition: transform .5s;
+    transition: transform .3s;
     z-index: 1;
   }
-  .menu--opened{
+  header .menu--opened{
     transform: translateY(0);
   }
   header .menu ul{
@@ -214,10 +216,12 @@ main{
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity .6s;
+    transition: all .1s;
   }
-  .menu--opened ul{
+  header .menu--opened ul{
+    transition: all .3s .1s;
     opacity:1;
+    transform: translateX(0);
   }
   .post{
     flex-direction:column-reverse;

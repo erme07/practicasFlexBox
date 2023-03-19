@@ -15,7 +15,7 @@
         <li><a href="">Inicio</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#galeria">Galeria</a></li>
-        <li><a href="">Section 4</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </nav>
     <button class="menu__button">
@@ -78,6 +78,14 @@
       <div><img src="https://picsum.photos/id/180/300" alt=""></div>
       <div><img src="https://picsum.photos/id/445/300" alt=""></div>
     </section>
+    <section class="about">
+      <h2 id="about">Acerca de Nosotros</h2>
+      <div class="about__text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quia repellendus quam eum quisquam natus! Debitis fugit amet assumenda quibusdam ad modi velit quod eaque, nostrum blanditiis consequatur, non quia illum a. Aspernatur vel porro atque quod debitis explicabo autem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae unde deleniti, dicta, assumenda provident eum eligendi tenetur doloribus tempora nostrum quia recusandae voluptatibus architecto!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quo mollitia fuga quia sit eos qui nobis culpa est repellat delectus, dolore facilis ea beatae veniam labore? Obcaecati voluptates, fuga quidem quo provident delectus esse deserunt optio deleniti ut at.</p>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <nav class="menu menu--footer">
@@ -89,14 +97,15 @@
       </ul>
     </nav>
   </footer>
+  
   <script>
     const menu = document.querySelector(".menu");
     const menu_button = document.querySelector(".menu__button");
-
     menu_button.addEventListener("click", ()=>{
       menu_button.classList.toggle('opened');
       menu.classList.toggle('menu--opened');
     })
   </script>
+
 </body>
 </html>
