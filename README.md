@@ -9,4 +9,5 @@
 ## Ver online
 
 * [Teoria Flex Box Ejemplificada](https://erme07.github.io/practicasFlexBox/teoria/index.html)
-* [Landing Page Básica](https://erme07.github.io/practicasFlexBox/layout1/flexBoxLayout-1.html)
+* [Landing Page Básica 1](https://erme07.github.io/practicasFlexBox/layout1/flexBoxLayout-1.html)
+* [Landing Page Básica 2](https://erme07.github.io/practicasFlexBox/layout2/flexBoxLayout-2.html)
